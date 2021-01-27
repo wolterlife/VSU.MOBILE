@@ -117,7 +117,7 @@
         android:layout_marginTop="32dp"
         android:gravity="center"
         android:shadowRadius="0"
-        android:text="А вот будь в курсе всех новостей"
+        android:text="Будь в курсе всех новостей"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
