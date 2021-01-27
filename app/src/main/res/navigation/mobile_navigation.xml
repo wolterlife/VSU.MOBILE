@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_calls">
+
+    <fragment
+        android:id="@+id/nav_mcanteen"
+        android:name="com.vsu.pocket.ui.home.HomeFragment"
+        android:label="@string/menu_mcanteen"
+        tools:layout="@layout/fragment_mcanteen" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.vsu.pocket.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_calls"
+        android:name="com.vsu.pocket.ui.calls.CallsFragment"
+        android:label="@string/menu_calls" />
+    <fragment
+        android:id="@+id/nav_plan"
+        android:name="com.vsu.pocket.ui.plan.PlanFragment"
+        android:label="@string/menu_plan" />
+    <fragment
+        android:id="@+id/nav_link"
+        android:name="com.vsu.pocket.ui.link.LinkFragment"
+        android:label="@string/menu_link"
+        tools:layout="@layout/fragment_link" />
+
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.vsu.pocket.ui.faq.FaqFragment"
+        android:label="@string/menu_faq"
+        tools:layout="@layout/fragment_faq" />
+    <fragment
+        android:id="@+id/nav_schedule"
+        android:name="com.vsu.pocket.ui.schedule.ScheduleFragment"
+        android:label="@string/menu_schedule" />
+</navigation>

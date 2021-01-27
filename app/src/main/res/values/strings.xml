@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">VSU POCKET</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">VSU Pocket</string>
+    <string name="nav_header_subtitle">Вместе генерируем успех</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">О приложении</string>
+
+    <string name="menu_mcanteen">Меню в столовой</string>
+    <string name="menu_link">Ссылки</string>
+    <string name="menu_faq">FAQ</string>
+    <string name="menu_schedule">Расписание</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="menu_calls">Звонки</string>
+    <string name="menu_plan">План университета</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="nav_schedule">nav_schedule</string>
+    <string name="nav_settings">nav_settings</string>
+    <string name="nav_calls">nav_calls</string>W
+    <string name="nav_plan">nav_plan</string>
+    <string name="nav_link">nav_link</string>
+</resources>
