@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }          // Navigation
 
-    // ссылки
+    // ССЫЛКИ
     fun vsufunc(view: View) { val vsuintent = Intent(Intent.ACTION_VIEW, Uri.parse("https://vsu.by")); startActivity(vsuintent) }
     fun sdofunc(view: View) { val sdointent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sdo.vsu.by/")); startActivity(sdointent) }
     fun youtubefunc(view: View) { val youtubeintent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCo18_krqqaEWSb6_cbHnupQ")); startActivity(youtubeintent) }
@@ -59,5 +59,7 @@ class MainActivity : AppCompatActivity() {
     fun facebookfunc(view: View) { val facebookintent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/vsu.by/")); startActivity(facebookintent) }
     fun twitterfunc(view: View) { val twitterintent = Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/VSU_Vitebsk")); startActivity(twitterintent) }
     fun telegramfunc(view: View) { val telegramintent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/vsumasherov/")); startActivity(telegramintent) }
+
+    // <- ТУТ ПРОДОЛЖЕНИЕ
 }
 

@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".ui.faq.FaqFragment" >
+    android:layout_height="match_parent"
+    tools:context=".ui.faq.FaqFragment">
 
     <View
         android:id="@+id/divider10"
@@ -38,9 +38,9 @@
         android:layout_marginTop="4dp"
         android:text="Проблема / Предложение"
         android:textSize="13sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toStartOf="@+id/divider8"
         app:layout_constraintHorizontal_bias="0.484"
-        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider23" />
 
@@ -130,9 +130,9 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:text="ОТВЕТ"
-        android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/divider5"
         app:layout_constraintTop_toBottomOf="@+id/divider4" />
@@ -190,8 +190,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="8dp"
-        android:textStyle="italic"
         android:text="Расписание звонков и занятий, меню в столовой, план аудиторий, полезные ссылки на ресурсы университета."
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/divider12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/divider8"
@@ -254,8 +254,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="8dp"
-        android:textStyle="italic"
         android:text="Укажите факультет, курс, номер группы (в настройках приложения)"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/divider19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/divider8"
@@ -269,8 +269,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="8dp"
-        android:textStyle="italic"
         android:text="Ожидайте, сменим"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/divider23"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/divider8"
@@ -357,9 +357,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:text="Вопрос / Идея"
         android:textSize="13sp"
         android:textStyle="italic"
-        android:text="Вопрос / Идея"
         app:layout_constraintEnd_toStartOf="@+id/divider8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
