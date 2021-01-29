@@ -5,11 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.vsu.pocket.ui.link.LinkFragment">
+    tools:context="com.vsu.pocket.MainActivity">
 
 
     <ImageButton
         android:id="@+id/vsubutton"
+        android:onClick="vsufunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -22,6 +23,7 @@
 
     <ImageButton
         android:id="@+id/facebookbutton"
+        android:onClick="facebookfunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -33,6 +35,7 @@
 
     <ImageButton
         android:id="@+id/telegrambutton"
+        android:onClick="telegramfunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -45,6 +48,7 @@
 
     <ImageButton
         android:id="@+id/youtubebutton"
+        android:onClick="youtubefunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -57,6 +61,7 @@
 
     <ImageButton
         android:id="@+id/sdobutton"
+        android:onClick="sdofunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -70,6 +75,7 @@
 
     <ImageButton
         android:id="@+id/instagrambutton"
+        android:onClick="instagramfunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -82,6 +88,7 @@
 
     <ImageButton
         android:id="@+id/vkbutton"
+        android:onClick="vkfunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -93,6 +100,7 @@
 
     <ImageButton
         android:id="@+id/twitterbutton"
+        android:onClick="twitterfunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
