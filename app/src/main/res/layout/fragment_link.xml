@@ -16,14 +16,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:onClick="vsufunc"
         android:src="@mipmap/vs"
         app:layout_constraintBottom_toTopOf="@+id/youtubebutton"
         app:layout_constraintEnd_toStartOf="@+id/divider14" />
 
     <ImageButton
         android:id="@+id/facebookbutton"
-        android:onClick="facebookfunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -35,7 +33,6 @@
 
     <ImageButton
         android:id="@+id/telegrambutton"
-        android:onClick="telegramfunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -48,7 +45,6 @@
 
     <ImageButton
         android:id="@+id/youtubebutton"
-        android:onClick="youtubefunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -61,10 +57,8 @@
 
     <ImageButton
         android:id="@+id/sdobutton"
-        android:onClick="sdofunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="8dp"
@@ -75,7 +69,6 @@
 
     <ImageButton
         android:id="@+id/instagrambutton"
-        android:onClick="instagramfunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -88,7 +81,6 @@
 
     <ImageButton
         android:id="@+id/vkbutton"
-        android:onClick="vkfunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -100,7 +92,6 @@
 
     <ImageButton
         android:id="@+id/twitterbutton"
-        android:onClick="twitterfunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

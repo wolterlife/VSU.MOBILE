@@ -18,6 +18,10 @@
             android:icon="@mipmap/iconscanteen"
             android:title="@string/menu_mcanteen" />
         <item
+            android:id="@+id/nav_map"
+            android:icon="@mipmap/iconsplan"
+            android:title="@string/menu_map" />
+        <item
             android:id="@+id/nav_plan"
             android:icon="@mipmap/iconsplan"
             android:title="@string/menu_plan" />
