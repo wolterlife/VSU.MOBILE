@@ -7,15 +7,14 @@
 
     <fragment
         android:id="@+id/nav_mcanteen"
-        android:name="com.vsu.pocket.ui.home.HomeFragment"
+        android:name="com.vsu.pocket.ui.mcanteen.McanteenFragment"
         android:label="@string/menu_mcanteen"
         tools:layout="@layout/fragment_mcanteen" />
 
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.vsu.pocket.ui.settings.SettingsFragment"
-        android:label="@string/menu_settings"
-        tools:layout="@layout/fragment_settings" />
+        android:label="@string/menu_settings" />
 
     <fragment
         android:id="@+id/nav_calls"
@@ -24,7 +23,8 @@
     <fragment
         android:id="@+id/nav_map"
         android:name="com.vsu.pocket.ui.map.MapFragment"
-        android:label="@string/menu_map" />
+        android:label="@string/menu_map"
+        tools:layout="@layout/fragment_map" />
     <fragment
         android:id="@+id/nav_plan"
         android:name="com.vsu.pocket.ui.plan.PlanFragment"
@@ -33,7 +33,7 @@
         android:id="@+id/nav_link"
         android:name="com.vsu.pocket.ui.link.LinkFragment"
         android:label="@string/menu_link"
-        tools:layout="@layout/fragment_link" />
+        tools:layout="@layout/fragment_schedule" />
 
     <fragment
         android:id="@+id/nav_faq"

@@ -13,8 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.vsu.pocket.R
 import kotlinx.android.synthetic.main.fragment_link.*
-
-
+import kotlinx.android.synthetic.main.fragment_mcanteen.*
 
 
 class LinkFragment : Fragment() {
@@ -27,7 +26,7 @@ class LinkFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        vsubutton.setOnClickListener{val vsuintent = Intent(Intent.ACTION_VIEW, Uri.parse("https://vsu.by")); startActivity(vsuintent)}
+        vsubutton.setOnClickListener{ println("test") }//val vsuintent = Intent(Intent.ACTION_VIEW, Uri.parse("https://vsu.by")); startActivity(vsuintent)}
         sdobutton.setOnClickListener{val sdointent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sdo.vsu.by/")); startActivity(sdointent)}
         youtubebutton.setOnClickListener{val youtubeintent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCo18_krqqaEWSb6_cbHnupQ")); startActivity(youtubeintent)}
         instagrambutton.setOnClickListener{val instagramintent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/tvu.vsu/")); startActivity(instagramintent)}
