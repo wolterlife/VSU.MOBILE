@@ -11,6 +11,7 @@
     <string name="menu_link">Ссылки</string>
     <string name="menu_faq">FAQ</string>
     <string name="menu_schedule">Расписание</string>
+    <string name="menu_schedule_system">Расписание</string>
     <string name="menu_settings">Настройки</string>
     <string name="menu_calls">Звонки</string>
     <string name="menu_plan">План университета</string>
@@ -32,4 +33,18 @@
     <string name="nav_map">nav_map</string>
     <string name="nav_mcanteen">nav_mcanteen</string>
     <string name="title_activity_settings">SettingsActivity</string>
+
+    <string-array name="FNames">
+        <item>- Не выбран -</item>
+        <item>ФХБИГН</item>
+        <item>ПФ</item>
+        <item>ФМИИТ</item>
+        <item>ФСПИП</item>
+        <item>ФФКИС</item>
+        <item>ФГИЯК</item>
+        <item>ХГФ</item>
+        <item>ЮФ</item>
+        <item>ФОИГ</item>
+    </string-array>
+
 </resources>

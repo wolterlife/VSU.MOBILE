@@ -16,43 +16,71 @@
             android:orientation="vertical">
 
 
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="40dp"
+                app:srcCompat="@mipmap/inform"
+                tools:src="@tools:sample/avatars" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:background="?android:attr/listDivider" />
+
             <Button
                 android:id="@+id/buttonPress1"
-                
+                android:textSize="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:drawableLeft="@drawable/down"
+                android:text="Почему не работает расписание?"
+                android:textAllCaps="false" />
+
 
             <TextView
                 android:id="@+id/FAQtext1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="12dp"
                 android:text="
-    Повседневная практика показывает, что рамки и место обучения кадров позволяет оценить значение существенных финансовых и административных условий. Товарищи! рамки и место обучения кадров в значительной степени обуславливает создание существенных финансовых и административных условий. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции позволяет оценить значение новых предложений. Равным образом сложившаяся структура организации влечет за собой процесс внедрения и модернизации новых предложений. С другой стороны сложившаяся структура организации требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач.
-    "
+Убедитесь, что Вы выбрали свой факультет в настройках приложения, или в разделе с расписанием. Проверьте подключение к интернету. Возможно расписание обновляется - поэтому раздел может временно не работать."
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/buttonPress2"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:drawableLeft="@drawable/down"
+                android:textSize="12dp"
+                android:text="Звонки указаны без перерыва внутри пары"
+                android:textAllCaps="false" />
 
             <TextView
                 android:id="@+id/FAQtext2"
+                android:textSize="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Задача организации, в особенности же постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия. Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации новых предложений. Не следует, однако забывать, что рамки и место обучения кадров играет важную роль в формировании соответствующий условий активизации. Таким образом сложившаяся структура организации способствует подготовки и реализации дальнейших направлений развития."
+                android:text="Это регулируется в настройках. Вы можете выбрать вид отображения графика с 5-ти минутными перерывами, или без них. Также Вы можете нажать на таблицу с графиком звонков и она поменяет свой вид."
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/buttonPress3"
+                android:textSize="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:drawableLeft="@drawable/down"
+                android:text="Бла бла бла"
+                android:textAllCaps="false" />
 
             <TextView
                 android:id="@+id/FAQtext3"
+                android:textSize="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia porttitor nisi scelerisque efficitur. Phasellus in iaculis turpis. Morbi placerat, felis vel fringilla dignissim, ipsum lectus sollicitudin purus, a feugiat mauris purus sed ante. Fusce facilisis, lorem vitae efficitur venenatis, nisi elit cursus urna, non laoreet quam augue ac erat. Sed nisl diam, posuere id sodales eget, tincidunt eget risus"

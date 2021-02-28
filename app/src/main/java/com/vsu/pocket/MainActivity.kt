@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.nav_mcanteen, R.id.nav_link, R.id.nav_faq, R.id.nav_schedule, R.id.nav_calls, R.id.nav_plan, R.id.nav_settings, R.id.nav_map), drawerLayout)
+                R.id.nav_mcanteen, R.id.nav_schedule_system, R.id.nav_link, R.id.nav_faq, R.id.nav_schedule, R.id.nav_calls, R.id.nav_plan, R.id.nav_settings, R.id.nav_map), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         Toast.makeText(applicationContext, "С возвращением, студент :)", Toast.LENGTH_LONG).show() // Приветствие

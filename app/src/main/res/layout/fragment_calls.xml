@@ -28,14 +28,14 @@
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:singleLine="true"
-            android:ellipsize="none"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:ellipsize="none"
             android:gravity="center"
+            android:singleLine="true"
             android:text="VSU POCKET"
-            android:textSize="40sp"
+            android:textSize="36sp"
 
             android:textStyle="bold" />
 
@@ -61,7 +61,7 @@
             android:layout_marginTop="8dp"
             android:text="Расписание звонков: "
             android:textColor="#000000"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <ImageView
@@ -79,7 +79,7 @@
             android:layout_marginTop="16dp"
             android:text="Большие перемены:"
             android:textColor="#0088FF"
-            android:textSize="24sp" />
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/textView7"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Между 2-ой и 3-ей парой: 11:00 - 11:30"
-            android:textSize="17sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/textView10"
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Между 5-ой и 6-ой парой: 16:05 - 16:35"
-            android:textSize="17sp" />
+            android:textSize="15sp" />
 
     </LinearLayout>
 

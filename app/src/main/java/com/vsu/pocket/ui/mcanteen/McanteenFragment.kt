@@ -20,7 +20,7 @@ class McanteenFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         webid.getSettings().setJavaScriptEnabled(true);
         webid.scrollTo(0,1000); // Проверить оптимизацию на других телефонах
-        webid.loadUrl("https://vsu.by/platnie-uslygi/perechen-platnykh-uslug/menyu-stolovoj.html");
+        webid.loadUrl("https://vsu.by/platnie-uslygi/menyu-stolovoj.html");
 
     }
 }

@@ -36,6 +36,11 @@
         tools:layout="@layout/fragment_schedule" />
 
     <fragment
+        android:id="@+id/nav_schedule_system"
+        android:name="com.vsu.pocket.ui.schedule_system.ScheduleSystemFragment"
+        android:label="@string/menu_schedule_system"
+        tools:layout="@layout/fragment_schedule" />
+    <fragment
         android:id="@+id/nav_faq"
         android:name="com.vsu.pocket.ui.faq.FaqFragment"
         android:label="@string/menu_faq"

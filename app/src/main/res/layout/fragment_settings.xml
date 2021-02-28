@@ -4,36 +4,160 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.link.LinkFragment">
+    tools:context="com.vsu.pocket.ui.settings.SettingsFragment">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/buttonCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Я люблю математику" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/textViewColorLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Параметр 1"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewColorSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Отметься для бла бла бла"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="2dp">
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"></Switch>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/textViewBoldLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Использовать жирный текст"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textViewBoldSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Отметьте для выделения жирным"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="2dp">
+
+                <CheckBox
+                    android:id="@+id/checkBoxBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/textViewColorLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Выводить красным цветом"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewColorSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Отметься для вывода красным цветом"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="2dp">
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/sp_option"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="437dp" />
+        android:entries="@array/FNames"
+        android:gravity="center"
+        android:padding="20dp"
+        android:spinnerMode="dialog"
+        android:dropDownWidth="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="2dp" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="365dp"
-        android:layout_height="391dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="168dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="542dp" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="567dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
