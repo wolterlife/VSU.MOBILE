@@ -41,4 +41,5 @@
             android:icon="@mipmap/iconssettings"
             android:title="@string/menu_settings" />
     </group>
+
 </menu>

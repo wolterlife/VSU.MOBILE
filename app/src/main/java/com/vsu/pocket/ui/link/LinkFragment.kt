@@ -2,6 +2,7 @@ package com.vsu.pocket.ui.link
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -25,6 +26,10 @@ class LinkFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val prefs : SharedPreferences?= activity?.getPreferences(Context.MODE_PRIVATE);
+        prefs?.edit()?.putBoolean("s_map" , false)?.apply();
+        setHasOptionsMenu(false);
 
         vsubutton.setOnClickListener{ val vsuintent = Intent(Intent.ACTION_VIEW, Uri.parse("https://vsu.by")); startActivity(vsuintent)}
         sdobutton.setOnClickListener{val sdointent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sdo.vsu.by/")); startActivity(sdointent)}

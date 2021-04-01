@@ -9,7 +9,7 @@
 
     <string name="menu_mcanteen">Меню в столовой</string>
     <string name="menu_link">Ссылки</string>
-    <string name="menu_faq">FAQ</string>
+    <string name="menu_faq">Справка</string>
     <string name="menu_schedule">Расписание</string>
     <string name="menu_schedule_system">Расписание</string>
     <string name="menu_settings">Настройки</string>
@@ -46,5 +46,15 @@
         <item>ЮФ</item>
         <item>ФОИГ</item>
     </string-array>
+
+    <string-array name="Courses">
+        <item>- Не выбран -</item>
+        <item>1 курс</item>
+        <item>2 курс</item>
+        <item>3 курс</item>
+        <item>4 курс</item>
+        <item>5 курс</item>
+    </string-array>
+    <string name="title_activity_map">Map</string>
 
 </resources>

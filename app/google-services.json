@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "938122244100",
+    "firebase_url": "https://vsu-system-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "vsu-system",
+    "storage_bucket": "vsu-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938122244100:android:dc12c1b028cb30121cc551",
+        "android_client_info": {
+          "package_name": "com.vsu.pocket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938122244100-53apn51vno4smqhuhceddhqnphkfhk4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPRJSWEHSbc9AQ-fRyamfaayxB9pRKksc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938122244100-53apn51vno4smqhuhceddhqnphkfhk4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

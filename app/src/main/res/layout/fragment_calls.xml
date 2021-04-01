@@ -8,8 +8,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:visibility="visible"
@@ -30,18 +31,19 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="30dp"
             android:ellipsize="none"
             android:gravity="center"
             android:singleLine="true"
             android:text="VSU POCKET"
-            android:textSize="36sp"
-
+            android:textSize="34sp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -70,7 +72,8 @@
             android:layout_height="243dp"
             android:layout_centerInParent="true"
             android:background="#00FFFFFF"
-            android:src="@mipmap/raspis" />
+            android:src="@mipmap/raspis"
+            app:srcCompat="@drawable/raspis" />
 
         <TextView
             android:id="@+id/textView3"

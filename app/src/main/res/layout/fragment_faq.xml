@@ -34,11 +34,11 @@
 
             <Button
                 android:id="@+id/buttonPress1"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/down"
-                android:text="Почему не работает расписание?"
+                android:text="Почему расписание старое?"
                 android:textAllCaps="false" />
 
 
@@ -46,9 +46,8 @@
                 android:id="@+id/FAQtext1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:text="
-Убедитесь, что Вы выбрали свой факультет в настройках приложения, или в разделе с расписанием. Проверьте подключение к интернету. Возможно расписание обновляется - поэтому раздел может временно не работать."
+                android:text="Проверьте подключение к интернету. Расписание обновляется автоматически по выходным. Если этого не происходит - напишите в тех. поддержку."
+                android:textSize="12sp"
                 android:visibility="gone" />
 
             <Button
@@ -57,34 +56,63 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/down"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 android:text="Звонки указаны без перерыва внутри пары"
                 android:textAllCaps="false" />
 
             <TextView
                 android:id="@+id/FAQtext2"
-                android:textSize="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Это регулируется в настройках. Вы можете выбрать вид отображения графика с 5-ти минутными перерывами, или без них. Также Вы можете нажать на таблицу с графиком звонков и она поменяет свой вид."
+                android:textSize="12sp"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/buttonPress3"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/down"
-                android:text="Бла бла бла"
+                android:text="Что если случайно указал не тот факультет/курс?"
                 android:textAllCaps="false" />
 
             <TextView
                 android:id="@+id/FAQtext3"
-                android:textSize="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia porttitor nisi scelerisque efficitur. Phasellus in iaculis turpis. Morbi placerat, felis vel fringilla dignissim, ipsum lectus sollicitudin purus, a feugiat mauris purus sed ante. Fusce facilisis, lorem vitae efficitur venenatis, nisi elit cursus urna, non laoreet quam augue ac erat. Sed nisl diam, posuere id sodales eget, tincidunt eget risus"
+                android:text='1) Перейдите в раздел "Настройки". 2) В настройках измените параметры "Факультет" и "Курс". 3) Нажмите кнопку сохранить. Также как вариант, можно сбросить все настройки через нижнюю кнопку "Выставить настройки по умолчанию".'
+                android:textSize="12sp"
                 android:visibility="gone" />
+
+            <Button
+                android:id="@+id/buttonPress4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/down"
+                android:text="Тех. поддержка || Предложение для VSU POCKET"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/FAQtext4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Нажмите на кнопку ниже для связи"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_menu_send"
+                android:visibility="gone" />
+
         </LinearLayout>
     </ScrollView>
 
