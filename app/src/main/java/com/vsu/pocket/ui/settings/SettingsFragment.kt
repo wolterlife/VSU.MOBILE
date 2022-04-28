@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.vsu.pocket.MainActivity
 import com.vsu.pocket.R
 import kotlinx.android.synthetic.main.fragment_schedule.*
@@ -58,7 +59,7 @@ class SettingsFragment : Fragment() {
         // Настройки при активации фрагмента
         if (napomchange != null) switch1.setChecked(napomchange)
         if (privetstvie != null) switch2.setChecked(privetstvie)
-        if (mercanie != null) switch3.setChecked(mercanie)
+//        if (mercanie != null) switch3.setChecked(mercanie)
         if (pererivs != null) switch4.setChecked(pererivs)
         if (sattelite != null) switch5.setChecked(sattelite)
 
@@ -74,9 +75,9 @@ class SettingsFragment : Fragment() {
             true
         )?.apply(); }
         else {privetstvie = false ; prefs?.edit()?.putBoolean("data_privetstvie", false)?.apply(); }}
-        switch3.setOnCheckedChangeListener { buttonView, isChecked ->
-        if (switch3.isChecked) {mercanie = true ; prefs?.edit()?.putBoolean("data_mercanie", true)?.apply(); }
-        else {mercanie = false ; prefs?.edit()?.putBoolean("data_mercanie", false)?.apply(); }}
+//        switch3.setOnCheckedChangeListener { buttonView, isChecked ->
+//        if (switch3.isChecked) {mercanie = true ; prefs?.edit()?.putBoolean("data_mercanie", true)?.apply(); }
+//        else {mercanie = false ; prefs?.edit()?.putBoolean("data_mercanie", false)?.apply(); }}
         switch4.setOnCheckedChangeListener { buttonView, isChecked ->
         if (switch4.isChecked) {pererivs = true ; prefs?.edit()?.putBoolean("data_pererivs", true)?.apply(); }
         else {pererivs = false ; prefs?.edit()?.putBoolean("data_pererivs", false)?.apply(); }}
@@ -110,14 +111,11 @@ class SettingsFragment : Fragment() {
         button.setOnClickListener {
             var selected: String = sp_option.getSelectedItem().toString()
             var selectedcourse: String = sp_option2.getSelectedItem().toString()
-            if (selected == "- Не выбран -") {
+            if ((selectedcourse != "- Не выбран -") && (selected == "- Не выбран -")) {
                 Toast.makeText(context, "Вы не выбрали факультет!", Toast.LENGTH_LONG).show()
             }
-            if (selectedcourse == "- Не выбран -") {
+            if ((selectedcourse == "- Не выбран -") && (selected != "- Не выбран -")) {
                 Toast.makeText(context, "Вы не выбрали курс!", Toast.LENGTH_LONG).show()
-            }
-            if (selected == "- Не выбран -") {
-                Toast.makeText(context, "Вы не выбрали факультет!", Toast.LENGTH_LONG).show()
             }
             if ((selectedcourse == "- Не выбран -") && (selected == "- Не выбран -")) {
                 Toast.makeText(context, "Вы не выбрали курс и факультет!", Toast.LENGTH_LONG).show()
@@ -128,6 +126,15 @@ class SettingsFragment : Fragment() {
                 prefs?.edit()?.putString("department", selected)?.apply();
                 prefs?.edit()?.putString("department_course", selectedcourse)?.apply();
                 Toast.makeText(context, "Сохранено", Toast.LENGTH_SHORT).show()
+
+                // Отправка данных на FireBase
+                val mFirebaseAnalytics: FirebaseAnalytics = FirebaseAnalytics.getInstance(requireContext())
+                val params = Bundle()
+                params.putString(FirebaseAnalytics.Param.ITEM_ID, selected)
+                params.putString(FirebaseAnalytics.Param.ITEM_NAME, selectedcourse)
+                mFirebaseAnalytics.logEvent("Course_Info", params)
+                //
+
                 ///////////////////////////////////////////////////////////////
             }
         }

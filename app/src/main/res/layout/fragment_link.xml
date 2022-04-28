@@ -7,126 +7,153 @@
     android:layout_height="match_parent"
     tools:context="com.vsu.pocket.ui.link.LinkFragment">
 
+    <WebView
+        android:id="@+id/webSdo"
+        android:layerType="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <ImageButton
-        android:id="@+id/youtubebutton"
+    </WebView>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/transparent"
-        android:src="@mipmap/yt"
-        app:layout_constraintBottom_toTopOf="@+id/vsubutton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
-
-    <ImageButton
-        android:id="@+id/vsubutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/transparent"
-        android:foregroundGravity="center"
-        android:src="@mipmap/vs"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/webSdo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
-
-    <ImageButton
-        android:id="@+id/facebookbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/transparent"
-        android:src="@mipmap/f"
-        app:layout_constraintStart_toEndOf="@+id/vsubutton"
-        app:layout_constraintTop_toBottomOf="@+id/instagrambutton" />
-
-    <ImageButton
-        android:id="@+id/telegrambutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
-        android:background="@android:color/transparent"
-        android:src="@mipmap/tg"
-        app:layout_constraintEnd_toStartOf="@+id/facebookbutton"
-        app:layout_constraintStart_toEndOf="@+id/twitterbutton"
-        app:layout_constraintTop_toBottomOf="@+id/facebookbutton" />
-
-    <ImageButton
-        android:id="@+id/sdobutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:src="@mipmap/sdo"
-        app:layout_constraintBottom_toTopOf="@+id/vsubutton"
-        app:layout_constraintEnd_toStartOf="@+id/vsubutton" />
-
-    <ImageButton
-        android:id="@+id/instagrambutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:src="@mipmap/ins"
-        app:layout_constraintBottom_toTopOf="@+id/vsubutton"
-        app:layout_constraintStart_toEndOf="@+id/vsubutton" />
-
-    <ImageButton
-        android:id="@+id/vkbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@android:color/transparent"
-        android:src="@mipmap/vk"
-        app:layout_constraintEnd_toStartOf="@+id/vsubutton"
-        app:layout_constraintTop_toBottomOf="@+id/sdobutton" />
-
-    <ImageButton
-        android:id="@+id/twitterbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@android:color/transparent"
-        android:src="@mipmap/t"
-        app:layout_constraintEnd_toStartOf="@+id/telegrambutton"
-        app:layout_constraintStart_toEndOf="@+id/vkbutton"
-        app:layout_constraintTop_toBottomOf="@+id/vkbutton" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Будь в курсе всех новостей"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/twitterbutton" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Нажми на иконку выше"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context="com.vsu.pocket.ui.link.LinkFragment">-->
+
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/youtubebutton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:src="@mipmap/yt"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/vsubutton"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.86" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/vsubutton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:foregroundGravity="center"-->
+<!--        android:src="@mipmap/vs"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.39" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/facebookbutton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:src="@mipmap/f"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/vsubutton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/instagrambutton" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/telegrambutton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:src="@mipmap/tg"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/facebookbutton"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/twitterbutton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/facebookbutton" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/sdobutton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:src="@mipmap/sdo"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/vsubutton"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/vsubutton" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/instagrambutton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:src="@mipmap/ins"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/vsubutton"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/vsubutton" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/vkbutton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginRight="8dp"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:src="@mipmap/vk"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/vsubutton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/sdobutton" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/twitterbutton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:src="@mipmap/t"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/telegrambutton"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/vkbutton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/vkbutton" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:text="Будь в курсе всех новостей"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/twitterbutton" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:text="Нажми на иконку выше"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.49"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView5" />-->
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

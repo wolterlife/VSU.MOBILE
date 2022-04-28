@@ -19,7 +19,9 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.vsu.pocket.MainActivity
 import com.vsu.pocket.R
 import kotlinx.android.synthetic.main.fragment_schedule.*
-
+import com.google.android.gms.maps.MapsInitializer
+import com.google.android.gms.maps.MapsInitializer.Renderer
+import com.google.android.gms.maps.OnMapsSdkInitializedCallback
 
 class MapFragment : Fragment() {
 
@@ -40,6 +42,10 @@ class MapFragment : Fragment() {
         // # SETTINGS TYPE OF MAP
         // 1 - стандартная ; other - гибрид;
 
+        //
+
+        //
+
         val prefs : SharedPreferences?= activity?.getPreferences(Context.MODE_PRIVATE);
         var stypemap = prefs?.getBoolean("data_sattelite",false)
         var sdepartshow = prefs?.getBoolean("data_select_univer",true)
@@ -47,11 +53,13 @@ class MapFragment : Fragment() {
         var sfoodshow = prefs?.getBoolean("data_select_food",true)
         var sstadshow = prefs?.getBoolean("data_select_stadions",true)
         var sgardenshow = prefs?.getBoolean("data_select_garden",true)
+        var shospitalshow = prefs?.getBoolean("data_select_hospital",true)
 
 
 
         googleMap.uiSettings.isCompassEnabled = true
         googleMap.uiSettings.isZoomControlsEnabled= true
+
 
 
         if (stypemap == false) googleMap.mapType = GoogleMap.MAP_TYPE_NORMAL;
@@ -72,13 +80,13 @@ class MapFragment : Fragment() {
         val food1 = LatLng(55.17759879501918, 30.224318095841713)  // Столовая Мск-33
         val food2 = LatLng(55.19921717345365, 30.235664596826467)  // Столовая Чапаева-30
         val food3 = LatLng(55.19267995230562, 30.22049683035245)  // Столовая Мед локус добавить время работы
-        val food4 = LatLng(55.17838967871301, 30.23353349946893)  // Столовая ВГТУ
+//        val food4 = LatLng(55.17838967871301, 30.23353349946893)  // Столовая ВГТУ
 
         val garden = LatLng(55.20135738777659, 30.212225285341127) // Ботанический сад
+        val hospital = LatLng(55.19306595192698, 30.22351073932567) // Мед. пункт
 
         val stad1 = LatLng(55.17539185200047, 30.224814547430658)  // Стадион главного корпуса
         val stad2 = LatLng(55.19859054763544, 30.22924646405134)  // Стадион ФСПИП и ФФКИС
-
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(depart1,13.1f))
 
 
@@ -176,13 +184,6 @@ class MapFragment : Fragment() {
                     .snippet("ул. Терешковой 18")
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.rest))
             )
-            googleMap.addMarker(
-                MarkerOptions()
-                    .position(food4)
-                    .title("Столовая ВГТУ")
-                    .snippet("Московский пр-т, 70")
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.rest))
-            )
         }
 
         if (sgardenshow == true) googleMap.addMarker(
@@ -192,6 +193,14 @@ class MapFragment : Fragment() {
                     .snippet("ул. Урицкого 6")
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.garden))
             )
+
+        if (shospitalshow == true) googleMap.addMarker(
+            MarkerOptions()
+                .position(hospital)
+                .title("Медпункт ВГУ")
+                .snippet("пр-т. Фрунзе 33. Вход с торца здания")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.hosp))
+        )
 
         if (sstadshow == true) {
             googleMap.addMarker(
@@ -228,9 +237,5 @@ class MapFragment : Fragment() {
         val prefs : SharedPreferences?= activity?.getPreferences(Context.MODE_PRIVATE);
         prefs?.edit()?.putBoolean("s_map" , true)?.apply();
         setHasOptionsMenu(true);
-
-
-
-
     }
 }

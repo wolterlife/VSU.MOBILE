@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name">VSU POCKET</string>
+    <string name="app_name">VSU MOBILE</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">VSU Pocket</string>
+    <string name="nav_header_title">VSU Mobile</string>
     <string name="nav_header_subtitle">Вместе генерируем успех</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">О приложении</string>
 
     <string name="menu_mcanteen">Меню в столовой</string>
-    <string name="menu_link">Ссылки</string>
-    <string name="menu_faq">Справка</string>
+    <string name="menu_link">SDO</string>
+    <string name="menu_faq">О приложении</string>
     <string name="menu_schedule">Расписание</string>
     <string name="menu_schedule_system">Расписание</string>
     <string name="menu_settings">Настройки</string>
@@ -56,5 +56,6 @@
         <item>5 курс</item>
     </string-array>
     <string name="title_activity_map">Map</string>
+    <string name="faq_text_Ru">Приложение было разработано для студентов ВГУ им. П. М. Машерова. Расписание обновляется преимущественно в воскресенье. В случае возникновения проблем в работе приложения - проверьте настройки. Выполните сброс настроек по умолчанию.  Для студентов ФГИЯКа предусмотренно два файла расписания, которые можно переключать в нижнем левом углу.  </string>
 
 </resources>

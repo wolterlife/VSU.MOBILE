@@ -6,17 +6,21 @@
     <group android:checkableBehavior="single"
            android:id="@+id/group1">
         <item
-            android:id="@+id/nav_calls"
-            android:icon="@mipmap/iconscalls"
-            android:title="@string/menu_calls" />
-        <item
             android:id="@+id/nav_schedule"
             android:icon="@mipmap/iconscheld"
             android:title="@string/menu_schedule" />
         <item
+            android:id="@+id/nav_calls"
+            android:icon="@mipmap/iconscalls"
+            android:title="@string/menu_calls" />
+        <item
             android:id="@+id/nav_mcanteen"
             android:icon="@mipmap/iconscanteen"
             android:title="@string/menu_mcanteen" />
+        <item
+            android:id="@+id/nav_link"
+            android:icon="@mipmap/iconslinks"
+            android:title="@string/menu_link" />
         <item
             android:id="@+id/nav_map"
             android:icon="@mipmap/iconsmap"
@@ -24,22 +28,19 @@
         <item
             android:id="@+id/nav_plan"
             android:icon="@mipmap/iconsplan"
-            android:title="@string/menu_plan" />
-        <item
-            android:id="@+id/nav_link"
-            android:icon="@mipmap/iconslinks"
-            android:title="@string/menu_link" />
+            android:title="@string/menu_plan"
+            android:visible="false" />
     </group>
     <group android:id="@+id/group2"
            android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_faq"
-            android:icon="@mipmap/iconsfaq"
-            android:title="@string/menu_faq" />
-        <item
             android:id="@+id/nav_settings"
             android:icon="@mipmap/iconssettings"
             android:title="@string/menu_settings" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@mipmap/iconsfaq"
+            android:title="@string/menu_faq" />
     </group>
 
 </menu>

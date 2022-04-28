@@ -36,7 +36,7 @@
             android:ellipsize="none"
             android:gravity="center"
             android:singleLine="true"
-            android:text="VSU POCKET"
+            android:text="VSU MOBILE"
             android:textSize="34sp"
             android:textStyle="bold" />
 

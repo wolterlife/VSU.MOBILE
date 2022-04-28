@@ -68,13 +68,15 @@
                 android:gravity="right"
                 android:padding="2dp">
 
-                <Switch
-                    android:id="@+id/switch1"
-                    android:layout_width="match_parent"
+                <CheckBox
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="right|center"
+                    android:layoutDirection="rtl"
+                    android:id="@+id/switch1"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
-                    android:checked="true"></Switch>
+                    android:checked="true"></CheckBox>
             </LinearLayout>
         </LinearLayout>
 
@@ -120,13 +122,15 @@
                 android:gravity="right"
                 android:padding="2dp">
 
-                <Switch
-                    android:id="@+id/switch2"
-                    android:layout_width="match_parent"
+                <CheckBox
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="right|center"
+                    android:layoutDirection="rtl"
+                    android:id="@+id/switch2"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
-                    android:checked="true"></Switch>
+                    android:checked="true"></CheckBox>
             </LinearLayout>
 
         </LinearLayout>
@@ -137,57 +141,53 @@
             android:layout_height="1dp"
             android:background="?android:attr/listDivider" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="4dp">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="4dp">-->
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="2dp">
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="2dp">-->
 
-                <TextView
-                    android:id="@+id/textViewColorLarge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Устранение мерцания"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewColorLarge"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Устранение мерцания"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="18sp" />-->
 
-                <TextView
-                    android:id="@+id/textViewColorSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="При включении теряется производительность"
-                    android:textSize="12sp" />
+<!--                <TextView-->
+<!--                    android:id="@+id/textViewColorSmall"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="При включении теряется производительность"-->
+<!--                    android:textSize="12sp" />-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:padding="2dp">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="right"-->
+<!--                android:padding="2dp">-->
 
-                <Switch
-                    android:id="@+id/switch3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_weight="1"
-                    android:checked="false"></Switch>
-            </LinearLayout>
+<!--                <CheckBox-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="right|center"-->
+<!--                    android:layoutDirection="rtl"-->
+<!--                    android:id="@+id/switch3"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:checked="false"></CheckBox>-->
+<!--            </LinearLayout>-->
 
-        </LinearLayout>
-
-        <View
-            android:id="@+id/divider5"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider" />
+<!--        </LinearLayout>-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -224,13 +224,15 @@
                 android:gravity="right"
                 android:padding="2dp">
 
-                <Switch
-                    android:id="@+id/switch4"
-                    android:layout_width="match_parent"
+                <CheckBox
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="right|center"
+                    android:layoutDirection="rtl"
+                    android:id="@+id/switch4"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
-                    android:checked="false"></Switch>
+                    android:checked="false"></CheckBox>
             </LinearLayout>
 
         </LinearLayout>
@@ -276,13 +278,15 @@
                 android:gravity="right"
                 android:padding="2dp">
 
-                <Switch
-                    android:id="@+id/switch5"
-                    android:layout_width="match_parent"
+                <CheckBox
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="right|center"
+                    android:layoutDirection="rtl"
+                    android:id="@+id/switch5"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
-                    android:checked="false"></Switch>
+                    android:checked="false"></CheckBox>
             </LinearLayout>
 
         </LinearLayout>

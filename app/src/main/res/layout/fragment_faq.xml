@@ -6,114 +6,82 @@
     android:layout_height="match_parent"
     tools:context="com.vsu.pocket.ui.faq.FaqFragment">
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024">
 
-        <LinearLayout
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            app:srcCompat="@mipmap/inform"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="center"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:gravity="center_horizontal"
+            android:text="@string/faq_text_Ru"
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:layout_marginBottom="25dp"
-                android:layout_marginTop="40dp"
-                app:srcCompat="@mipmap/inform"
-                tools:src="@tools:sample/avatars" />
+    </LinearLayout>
 
-            <View
-                android:id="@+id/divider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="10dp"
-                android:background="?android:attr/listDivider" />
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Версия приложения: 1.0"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <Button
-                android:id="@+id/buttonPress1"
-                android:textSize="12sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/down"
-                android:text="Почему расписание старое?"
-                android:textAllCaps="false" />
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu_send"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Вопросы / Техподдержка по приложению"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/FAQtext1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Проверьте подключение к интернету. Расписание обновляется автоматически по выходным. Если этого не происходит - напишите в тех. поддержку."
-                android:textSize="12sp"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/buttonPress2"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/down"
-                android:textSize="12sp"
-                android:text="Звонки указаны без перерыва внутри пары"
-                android:textAllCaps="false" />
-
-            <TextView
-                android:id="@+id/FAQtext2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Это регулируется в настройках. Вы можете выбрать вид отображения графика с 5-ти минутными перерывами, или без них. Также Вы можете нажать на таблицу с графиком звонков и она поменяет свой вид."
-                android:textSize="12sp"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/buttonPress3"
-                android:textSize="12sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/down"
-                android:text="Что если случайно указал не тот факультет/курс?"
-                android:textAllCaps="false" />
-
-            <TextView
-                android:id="@+id/FAQtext3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text='1) Перейдите в раздел "Настройки". 2) В настройках измените параметры "Факультет" и "Курс". 3) Нажмите кнопку сохранить. Также как вариант, можно сбросить все настройки через нижнюю кнопку "Выставить настройки по умолчанию".'
-                android:textSize="12sp"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/buttonPress4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/down"
-                android:text="Тех. поддержка || Предложение для VSU POCKET"
-                android:textAllCaps="false"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/FAQtext4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:text="Нажмите на кнопку ниже для связи"
-                android:textSize="12sp"
-                android:visibility="gone" />
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_menu_send"
-                android:visibility="gone" />
-
-        </LinearLayout>
-    </ScrollView>
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logovsuunph"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

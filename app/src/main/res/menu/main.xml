@@ -41,5 +41,12 @@
         android:checkable="true"
         android:visible="false"
         />
-
+    <item
+        android:id="@+id/menucheck6"
+        android:title="Медпункт"
+        app:showAsAction="never"
+        android:orderInCategory="6"
+        android:checkable="true"
+        android:visible="false"
+        />
 </menu>
