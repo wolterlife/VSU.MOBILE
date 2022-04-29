@@ -6,6 +6,10 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.ConnectivityManager
+import android.net.Network
+import android.net.NetworkCapabilities
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +21,8 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 import com.vsu.pocket.MainActivity
 import com.vsu.pocket.R
 import kotlinx.android.synthetic.main.fragment_schedule.*
@@ -24,6 +30,9 @@ import kotlinx.android.synthetic.main.fragment_settings.*
 import kotlinx.android.synthetic.main.fragment_settings.sp_option
 import kotlinx.android.synthetic.main.fragment_settings.sp_option2
 import kotlinx.coroutines.delay
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import java.io.File
+import java.io.FileInputStream
 
 class SettingsFragment : Fragment() {
 
@@ -121,24 +130,133 @@ class SettingsFragment : Fragment() {
                 Toast.makeText(context, "Вы не выбрали курс и факультет!", Toast.LENGTH_LONG).show()
             }
 
+            // Проверка интернет соединения
+            fun checkNetworkConnection(connectivityManager: ConnectivityManager, network: Network?): Boolean {
+                connectivityManager.getNetworkCapabilities(network)?.also {
+                    if (it.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
+                        return true
+                    }
+                    else if (it.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
+                        return true
+                    }
+                }
+                return false
+            }
+
+            fun isNetworkConnected(context: Context): Boolean {
+                var result = false;
+                (context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager).apply {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        result = checkNetworkConnection(this, this.activeNetwork)
+                    } else {
+                        val networks = this.allNetworks
+                        for (network in networks) {
+                            if (checkNetworkConnection(this, network)) {
+                                result = true
+                            }
+                        }
+                    }
+                }
+                return result;
+            }
+
+
             if ((selectedcourse != "- Не выбран -") && (selected != "- Не выбран -")) {
-                ///////////////////////////////////////////////////////////////
-                prefs?.edit()?.putString("department", selected)?.apply();
-                prefs?.edit()?.putString("department_course", selectedcourse)?.apply();
-                Toast.makeText(context, "Сохранено", Toast.LENGTH_SHORT).show()
+                if (context?.let { isNetworkConnected(it) } == true) {
+                    ///////////////////////////////////////////////////////////////
+                    prefs?.edit()?.putString("department", selected)?.apply();
+                    prefs?.edit()?.putString("department_course", selectedcourse)?.apply();
+                    Toast.makeText(context, "Сохранено", Toast.LENGTH_SHORT).show()
 
-                // Отправка данных на FireBase
-                val mFirebaseAnalytics: FirebaseAnalytics = FirebaseAnalytics.getInstance(requireContext())
-                val params = Bundle()
-                params.putString(FirebaseAnalytics.Param.ITEM_ID, selected)
-                params.putString(FirebaseAnalytics.Param.ITEM_NAME, selectedcourse)
-                mFirebaseAnalytics.logEvent("Course_Info", params)
-                //
+                    //  Скачивание нового документа
+                    fun getUrl(url: String) {
+                        val storage = Firebase.storage
+                        val storageRef = storage.reference;
+                        val islandRef = storageRef.child("$url.xls")
 
+                        fun getFile(): File { // Если в настройках задано, что файла нет = создаёт его, иначе возвращает его
+                            val pathStr = prefs?.getString("path_schedule", "null_when_get_prefs");
+                            if (pathStr == "null_when_get_prefs") {
+                                val file = File.createTempFile("schedule", "xls")
+                                prefs.edit().putString("path_schedule", file.toString()).apply();
+                                return file
+                            }
+                            else {
+                                return File(pathStr)
+                            }
+
+                        }
+                        val localFile = getFile();
+                        islandRef.getFile(localFile).addOnSuccessListener {
+                        }.addOnFailureListener {
+                            Toast.makeText(context, "DOWNLOAD ERROR! $url", Toast.LENGTH_LONG).show()
+                        }
+                    }
+                    // БИО
+                    if (selected == "ФХБИГН" && selectedcourse == "1 курс") { getUrl("BIO (1)"); }
+                    if (selected == "ФХБИГН" && selectedcourse == "2 курс") { getUrl("BIO (2)"); }
+                    if (selected == "ФХБИГН" && selectedcourse == "3 курс") { getUrl("BIO (3)"); }
+                    if (selected == "ФХБИГН" && selectedcourse == "4 курс") { getUrl("BIO (4)"); }
+                    // ПФ
+                    if (selected == "ПФ" && selectedcourse == "1 курс") { getUrl("PF (1)"); }
+                    if (selected == "ПФ" && selectedcourse == "2 курс") { getUrl("PF (2)"); }
+                    if (selected == "ПФ" && selectedcourse == "3 курс") { getUrl("PF (3)"); }
+                    if (selected == "ПФ" && selectedcourse == "4 курс") { getUrl("PF (4)"); }
+                    // ФМИИТ
+                    if (selected == "ФМИИТ" && selectedcourse == "1 курс") { getUrl("FMIT (1)"); }
+                    if (selected == "ФМИИТ" && selectedcourse == "2 курс") { getUrl("FMIT (2)"); }
+                    if (selected == "ФМИИТ" && selectedcourse == "3 курс") { getUrl("FMIT (3)"); }
+                    if (selected == "ФМИИТ" && selectedcourse == "4 курс") { getUrl("FMIT (4)"); }
+                    // ФСПИП
+                    if (selected == "ФСПИП" && selectedcourse == "1 курс") { getUrl("FSPIP (1)"); }
+                    if (selected == "ФСПИП" && selectedcourse == "2 курс") { getUrl("FSPIP (2)"); }
+                    if (selected == "ФСПИП" && selectedcourse == "3 курс") { getUrl("FSPIP (3)"); }
+                    if (selected == "ФСПИП" && selectedcourse == "4 курс") { getUrl("FSPIP (4)"); }
+                    // ФФКИС
+                    if (selected == "ФФКИС" && selectedcourse == "1 курс") { getUrl("FKIS (1)"); }
+                    if (selected == "ФФКИС" && selectedcourse == "2 курс") { getUrl("FKIS (2)"); }
+                    if (selected == "ФФКИС" && selectedcourse == "3 курс") { getUrl("FKIS (3)"); }
+                    if (selected == "ФФКИС" && selectedcourse == "4 курс") { getUrl("FKIS (4)"); }
+                    // ФГИЯК
+                    if (selected == "ФГИЯК" && selectedcourse == "1 курс") { getUrl("FGIYAK (1)"); }
+                    if (selected == "ФГИЯК" && selectedcourse == "2 курс") { getUrl("FGIYAK (2)"); }
+                    if (selected == "ФГИЯК" && selectedcourse == "3 курс") { getUrl("FGIYAK (3)"); }
+                    if (selected == "ФГИЯК" && selectedcourse == "4 курс") { getUrl("FGIYAK (4)"); }
+                    if (selected == "ФГИЯК" && selectedcourse == "5 курс") { getUrl("FGIYAK (5)"); }
+                    // ХГФ
+                    if (selected == "ХГФ" && selectedcourse == "1 курс") { getUrl("HGF (1)"); }
+                    if (selected == "ХГФ" && selectedcourse == "2 курс") { getUrl("HGF (2)"); }
+                    if (selected == "ХГФ" && selectedcourse == "3 курс") { getUrl("HGF (3)"); }
+                    if (selected == "ХГФ" && selectedcourse == "4 курс") { getUrl("HGF (4)"); }
+                    if (selected == "ХГФ" && selectedcourse == "5 курс") { getUrl("HGF (5)"); }
+                    // ЮФ
+                    if (selected == "ЮФ" && selectedcourse == "1 курс") { getUrl("YF (1)"); }
+                    if (selected == "ЮФ" && selectedcourse == "2 курс") { getUrl("YF (2)"); }
+                    if (selected == "ЮФ" && selectedcourse == "3 курс") { getUrl("YF (3)"); }
+                    if (selected == "ЮФ" && selectedcourse == "4 курс") { getUrl("YF (4)"); }
+                    // ФОИГ
+                    if (selected == "ФОИГ" && selectedcourse == "1 курс") { getUrl("FOIG (1)"); }
+                    if (selected == "ФОИГ" && selectedcourse == "2 курс") { getUrl("FOIG (2)"); }
+                    if (selected == "ФОИГ" && selectedcourse == "3 курс") { getUrl("FOIG (3)"); }
+                    if (selected == "ФОИГ" && selectedcourse == "4 курс") { getUrl("FOIG (4)"); }
+                    //
+
+                    // Отправка данных на FireBase
+                    val mFirebaseAnalytics: FirebaseAnalytics =
+                        FirebaseAnalytics.getInstance(requireContext())
+                    val params = Bundle()
+                    params.putString(FirebaseAnalytics.Param.ITEM_ID, selected)
+                    params.putString(FirebaseAnalytics.Param.ITEM_NAME, selectedcourse)
+                    mFirebaseAnalytics.logEvent("Course_Info", params)
+                    //
+                } else {
+                    Toast.makeText(context,"Проверьте подключение к интернету и повторите попытку",Toast.LENGTH_SHORT).show();
+                }
                 ///////////////////////////////////////////////////////////////
             }
         }
         buttonDeff.setOnClickListener {
+            prefs?.edit()?.putString("path_schedule", "null_when_get_prefs")?.apply();
             prefs?.edit()?.putString("department", "- Не выбран -")?.apply();
             prefs?.edit()?.putString("department_course", "- Не выбран -")?.apply();
             prefs?.edit()?.putBoolean("data_napom", true)?.apply();
